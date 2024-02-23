@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Objects</title>
+  </head>
+  <body>
+    <script>
+      // Создание объекта obj1
+      const obj1 = {
+        name: "Nikita",
+        age: 19,
+        city: "Minsk",
+        occupation: "Engineer",
+        hobbies: ["sport", "traveling"],
+      };
+
+      // Создание объекта obj2
+      var obj2 = new Object();
+      obj2.firstName = "";
+      obj2.lastName = "";
+      obj2.age = 15;
+      obj2.city = "";
+      obj2.occupation = "";
+      // Вывод имен свойств объекта obj1
+      for (var name in obj1) {
+        document.write(name + "<br>");
+      }
+
+      // Вывод значений свойств объекта obj2
+      for (var value in obj2) {
+        document.write(obj2[value] + "<br>");
+      }
+      obj1.greet = function (name) {
+        document.write("<br>" + "Hello, my name is " + obj1.name + "." + " ");
+        document.write(
+          "I am " + obj1.age + " years old and live in " + obj1.city + "." + " "
+        );
+        document.write("My occupation is " + obj1.occupation + "." + " ");
+      };
+      obj1.greet();
+
+      document.write("<br>" + "<br>" + "Information about obj2:");
+      document.write("<p>First Name: " + obj2.firstName + "</p>");
+      document.write("<p>Last Name: " + obj2.lastName + "</p>");
+      document.write("<p>Age: " + obj2.age + "</p>");
+      document.write("<p>City: " + obj2.city + "</p>");
+      document.write("<p>Occupation: " + obj2.occupation + "</p>");
+
+      const employee = {
+        name: "Ivan",
+        department: "Sales",
+        phone: "+375294802692",
+        salary: "$1,000",
+      };
+
+      // Вывод информации о сотруднике на веб-страницу
+      document.write("<h2>Information about Employee:</h2>");
+      document.write("<p>Name: " + employee.name + "</p>");
+      document.write("<p>Department: " + employee.department + "</p>");
+      document.write("<p>Phone: " + employee.phone + "</p>");
+      document.write("<p>Salary: " + employee.salary + "</p>");
+    </script>
+  </body>
+</html>
